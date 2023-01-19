@@ -16,6 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="mediaQuery.css" />
     <!-- <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -47,6 +48,11 @@
     </div>
     <header>
       <div class="navbar">
+        <div class="toggle">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
         <div class="logo">
           <img src="./images/logo2.png" alt="error" />
         </div>
@@ -62,7 +68,7 @@
               style="font-size: 28px; color: rgb(247, 247, 247)"
             ></i>
           </h3>
-          <h3>
+          <h3 id="check">
             SignIn
             <i
               class="fas fa-user-circle"
@@ -77,7 +83,7 @@
         <div class="top-category">
           <ul>
             <div style="padding: 6px">Top Categories</div>
-            <li>
+            <li class="li-tab">
               <a href="#">
                 <div class="content">
                   <span
@@ -198,7 +204,6 @@
           <div class="content1">Kitchen Need</div>
         </div>
       </div>
-
       <div class="products">
         <div class="cards">
           <div class="image">
@@ -213,7 +218,7 @@
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
+              <span class="fa fa-star checked"></span>
               <span class="fa fa-star"></span>
             </div>
             <div class="price">
@@ -228,12 +233,14 @@
         <div class="cards">
           <div class="image">
             <img
-              src="https://n1.sdlcdn.com/imgs/i/e/r/large/ASIAN-Blue-Running-Shoes-SDL243004409-1-d0751.jpeg"
+              src="https://n4.sdlcdn.com/imgs/k/e/u/large/Veirdo-100-Cotton-Regular-Fit-SDL302182620-1-f0fac.jpg"
               alt=""
             />
           </div>
           <div class="desc">
-            <div>ASIAN Blue Men's Sports Running Shoes</div>
+            <div>
+              Veirdo - Green Cotton Regular Fit Men's T-Shirt ( Pack of 1 )
+            </div>
             <div>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
@@ -243,60 +250,10 @@
             </div>
             <div class="price">
               <div>
-                <span>Rs 999</span>
-                <span>Rs 575</span>
+                <span>Rs 1,199</span>
+                <span>Rs 359</span>
               </div>
-              <div class="discount">42% OFF</div>
-            </div>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="image">
-            <img
-              src="https://n1.sdlcdn.com/imgs/i/e/r/large/ASIAN-Blue-Running-Shoes-SDL243004409-1-d0751.jpeg"
-              alt=""
-            />
-          </div>
-          <div class="desc">
-            <div>ASIAN Blue Men's Sports Running Shoes</div>
-            <div>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-            </div>
-            <div class="price">
-              <div>
-                <span>Rs 999</span>
-                <span>Rs 575</span>
-              </div>
-              <div class="discount">42% OFF</div>
-            </div>
-          </div>
-        </div>
-        <div class="cards">
-          <div class="image">
-            <img
-              src="https://n1.sdlcdn.com/imgs/i/e/r/large/ASIAN-Blue-Running-Shoes-SDL243004409-1-d0751.jpeg"
-              alt=""
-            />
-          </div>
-          <div class="desc">
-            <div>ASIAN Blue Men's Sports Running Shoes</div>
-            <div>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star checked"></span>
-              <span class="fa fa-star"></span>
-              <span class="fa fa-star"></span>
-            </div>
-            <div class="price">
-              <div>
-                <span>Rs 999</span>
-                <span>Rs 575</span>
-              </div>
-              <div class="discount">42% OFF</div>
+              <div class="discount">70% OFF</div>
             </div>
           </div>
         </div>
@@ -308,7 +265,35 @@
             />
           </div>
           <div class="desc">
-            <div>ASIAN Blue Men's Sports Running Shoes</div>
+            <div>
+              Loard Shiv Damru Locket With Puchmukhi Rudraksha Mala,For Men &
+              Women
+            </div>
+            <div>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star checked"></span>
+              <span class="fa fa-star"></span>
+            </div>
+            <div class="price">
+              <div>
+                <span>Rs 499</span>
+                <span>Rs 159</span>
+              </div>
+              <div class="discount">68% OFF</div>
+            </div>
+          </div>
+        </div>
+        <div class="cards">
+          <div class="image">
+            <img
+              src="https://n2.sdlcdn.com/imgs/h/9/p/large/ASIAN-Brown-Daily-Slippers-SDL287171338-4-f3709.jpg"
+              alt=""
+            />
+          </div>
+          <div class="desc">
+            <div>ASIAN Brown Flip Flops</div>
             <div>
               <span class="fa fa-star checked"></span>
               <span class="fa fa-star checked"></span>
@@ -327,12 +312,350 @@
         </div>
       </div>
     </div>
+    <div class="display-block">
+      <div class="container-tab">
+        <div class="left-content">
+          <div>
+            <p>Footwear</p>
+            <p class="sub-text">Casual Shoes</p>
+            <p class="sub-text">Sports Shoesr</p>
+            <p class="sub-text">Sneakers</p>
+            <p class="sub-text">Formal Shoes</p>
+            <p class="sub-text">Sleepers & Flip-Flops</p>
+          </div>
+          <div class="horizontal"></div>
 
-    <!-- <div style="background-color: aqua; display: inline;">1</div>
-    <div  style="background-color: rgb(255, 94, 0);">1</div>
-    <div  style="background-color: rgb(89, 255, 0);">1</div>
-    <div  style="background-color: rgb(8, 157, 157);">1</div>
-    <div style="background-color: rgb(40, 80, 80);">1</div> -->
+          <div>
+            <p>BAGS & LUGGAGE</p>
+            <p class="sub-text">Backpacks</p>
+            <p class="sub-text">Laptop Bags</p>
+            <p class="sub-text">Hiking Bags</p>
+            <p class="sub-text">Luggage & Suitcases</p>
+            <p class="sub-text">Travel Accessories</p>
+            <p class="sub-text">Office Bags</p>
+          </div>
+        </div>
+        <div class="vertical"></div>
+        <div class="middle-content">
+          <div>
+            <p>CLOTHING</p>
+            <p class="sub-text">T-Shirts & Polos</p>
+            <p class="sub-text">Shirts</p>
+            <p class="sub-text">Jeans</p>
+            <p class="sub-text">Trousers & Chinos</p>
+            <p class="sub-text">Innerwear & Sleepwear</p>
+          </div>
+          <div class="horizontal"></div>
+          <div>
+            <p>WINTER WEAR</p>
+            <p class="sub-text">Jackets</p>
+            <p class="sub-text">Sweatshirts</p>
+            <p class="sub-text">Sweaters</p>
+            <p class="sub-text">Thermals</p>
+          </div>
+          <div class="horizontal"></div>
+          <div>
+            <p>SPORTSWEAR</p>
+            <p class="sub-text">T-Shirts & Polos</p>
+            <p class="sub-text">Trackpants & Tracksuits</p>
+          </div>
+          <div class="horizontal"></div>
+          <div>
+            <p>MEN'S GROOMING</p>
+            <p class="sub-text">Shaving Creams & Gels</p>
+          </div>
+        </div>
+        <div class="vertical"></div>
+        <div class="right-content">
+          <div>
+            <p>EYEWEAR</p>
+            <p class="sub-text">Sunglasses</p>
+          </div>
+          <div class="horizontal"></div>
+          <div>
+            <p>WATCHES</p>
+          </div>
+          <div class="horizontal"></div>
+          <div>
+            <p>JEWELLERY & CUFFLINKS</p>
+          </div>
+          <div class="horizontal"></div>
+          <div>
+            <p>ACCESSORIES</p>
+            <p class="sub-text">Wallets</p>
+            <p class="sub-text">Belts</p>
+            <p class="sub-text">Hats & Caps</p>
+            <p class="sub-text">Gift Sets</p>
+            <p class="sub-text">Neckties & Cravats</p>
+            <p class="sub-text">Card Holders</p>
+            <p class="sub-text">Keychains</p>
+            <p class="sub-text">Suspenders</p>
+          </div>
+          <div class="horizontal"></div>
+          <div>
+            <p class="sub-text">FRAGRANCES</p>
+            <p class="sub-text">Perfumes</p>
+            <p class="sub-text">Deodorants</p>
+            <p class="sub-text">Attars (Non-Alcoholic)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <!-- Use Flex to achieve the layout  -->
+      <div>
+        <!-- Left hand side part  -->
+        <img src="https://i2.sdlcdn.com/img/appScreenshot@1x.png" alt="error" />
+      </div>
+
+      <div>
+        <!-- Right hand side part  -->
+        <h1>Download Smartdeal App Now</h1>
+        <h3>Unlock Exclusive Offers</h3>
+        <p>For lightning fast ordering experience download the Smartdeal App</p>
+        <div>
+          <img
+            src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.09%20PM_558991.png"
+            alt="error"
+          />
+          <img
+            src="https://masai-course.s3.ap-south-1.amazonaws.com/editor/uploads/2022-12-21/Screenshot%202022-12-21%20at%202.47.43%20PM_652243.png"
+            alt="img"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div style="width: 100%; background-color: white; margin-top: 40px">
+      <hr style="color: #cacaca" />
+      <div class="payment">
+        <div>
+          <img src="./images/pay1.png" alt="" />
+          <p>100% Secure Payments</p>
+          <p>Moving your card details to a much more</p>
+          <p>secured place</p>
+        </div>
+        <div>
+          <img src="./images/pay2.png" alt="" />
+          <p>100% Secure Payments</p>
+          <p>Moving your card details to a much more</p>
+          <p>secured place</p>
+        </div>
+        <div>
+          <img src="./images/pay3.png" alt="" />
+          <p>100% Secure Payments</p>
+          <p>Moving your card details to a much more</p>
+          <p>secured place</p>
+        </div>
+        <div>
+          <img src="./images/pay4.png" alt="" />
+          <p>100% Secure Payments</p>
+          <p>Moving your card details to a much more</p>
+          <p>secured place</p>
+        </div>
+      </div>
+      <hr style="color: #cacaca" />
+    </div>
+    <div class="about">
+      <div>
+        <p>Policy Info</p>
+        <p class="p-details">Privacy Policy</p>
+        <p class="p-details">Terms of Sale</p>
+        <p class="p-details">Terms of Use</p>
+        <p class="p-details">Report Abuse & Takedown Policy</p>
+        <p class="p-details">FAQ</p>
+      </div>
+      <div>
+        <p>Company</p>
+        <p class="p-details">Impact@Snapdeal</p>
+        <p class="p-details">Careers</p>
+        <p class="p-details">Blog</p>
+        <p class="p-details">Sitemap</p>
+        <p class="p-details">Contact Us</p>
+      </div>
+      <div>
+        <p>Snapdeal Business</p>
+        <p class="p-details">Shopping Appy</p>
+        <p class="p-details">Sell on Snapdeal</p>
+        <p class="p-details">Media Enquiries</p>
+      </div>
+      <div>
+        <p>Popular Links</p>
+        <p class="p-details">Lehenga</p>
+        <p class="p-details">Kid's Clothing</p>
+        <p class="p-details">Sarees</p>
+        <p class="p-details">Winter Wear</p>
+      </div>
+    </div>
+    <hr style="color: #cacaca" />
+
+    <div class="social">
+      <div>
+        <p>Payment</p>
+        <img src="./images/paycard1.png" alt="" />
+        <img src="./images/paycard2.png" alt="" />
+        <img src="./images/paycard3.png" alt="" />
+        <img src="./images/paycard4.png" alt="" />
+        <img src="./images/paycard5.png" alt="" />
+      </div>
+      <div>
+        <p>Connect</p>
+        <img src="./images/social1.png" alt="" />
+        <img src="./images/social2.png" alt="" />
+        <img src="./images/social3.png" alt="" />
+        <img src="./images/social4.png" alt="" />
+        <img src="./images/social5.png" alt="" />
+      </div>
+    </div>
+    <hr style="color: #cacaca" />
+    <div class="text">
+      <p>
+        Men: Shirts for Men / Casual Shirts for Men / Formal Shirts for Men /
+        Hoodies for Men / Cotton Shirts for Men / T Shirts for Men / Polo T
+        shirts / Kurta Pajama for Men / White Shirt / Black Shirt / Lower for
+        Men / Trousers for Men / Jacket for Men / Formal Pants for Men /
+        Tracksuit for Men / Jeans for Men / Kurta Payjama Sets / Kurta for Men /
+        Blazer for Men / Sweater for Men Women: Tops for Women / Kurti / Cotton
+        Sarees / Georgette Sarees / Chiffon Sarees / Net Sarees / Dresses for
+        Women / Jumpsuit for Women / Jeans for Women / Salwar Suit / Bra /
+        Jacket for Women / Night Dress for Women / Sweatshirt for Women / Shorts
+        for Women / Readymade Blouse / Dupatta / T Shirt for Women / Shirts for
+        Women / Skirts for Women / Ethnic wear for Women / Western Dresses for
+        Women / Leggings for Women Footwear: Men's Footwear / Casual Shoes for
+        Men / Formal Shoes for Men / Loafers for Men / Slippers for Men / Boots
+        for Men / Sandals for Men / Footwear for Women / Heels for Women /
+        Sandals for Women / Shoes for Women / Sandals for Women / Slippers for
+        Women / Boots for Women / Jutti for Women / Sports Shoes for Women Home
+        & Kitchen: Wall Painting / Wall Stickers / Dream Catcher / Rangoli
+        Designs / Clock / Wall Clock / Alarm Clock / Diya / Bean Bag / Laptop
+        Table / Study Table / Wall Hanging / Ceiling Lights / Table Lamp /
+        Hanging Lights / LED Bulbs / Torch Light / LED Lights / Flower Vase /
+        Keychain / Rudraksha / Screwdriver Watch: Watch For Men / Womens Watches
+        / Smart Watch / Boys Watch / Girls Watch Home Furnishing: Bed Sheet /
+        Mosquito Net / Mattress / Curtains / Sofa Cover / Blanket / Pillow /
+        Carpet / Apron / Quilt / Floor Mat / Towel / Pillow Cover Electronics:
+        Bluetooth Speakers / Headphones / Earphone / Ceiling Fan / Geysers /
+        Trimmer / Hair Straightner / Hair Dryer / Water Purifier / Mixer Grinder
+        / Gas Stove / Electric Kettle / Computer Mouse / Computer Keyboard / USB
+        & HDMI Cables / Computer Antivirus Mobiles Accessories: Mobile Covers /
+        Leather Mobile Covers / Printed Back Covers / Tempered Glass
+        <br />
+        <br />
+        Smartdeal is India's leading pure-play value Ecommerce platform. Founded
+        in 2010 by Kunal Bahl and Rohit Bansal, Snapdeal is one of the top four
+        online lifestyle shopping destinations of India. Snapdeal brings
+        together a wide assortment of good quality and value- priced merchandise
+        on its platform. Snapdeal's vision is to enable the shoppers of Bharat
+        to experience the joy of living their aspirations through reliable,
+        value-for-money shopping. With a personalized, multilingual interface
+        and cutting edge technology, Snapdeal has simplified the shopping
+        experience for its value-conscious buyers by showcasing the most
+        relevant products- products that are a good functional fit with their
+        needs and of a quality that lasts- thereby delivering true value to its
+        customers. With its commitment to high service standards, Snapdeal
+        suppliers operate under a well structured ecosystem that enables them to
+        offer great quality products at affordable prices. With majority of the
+        value-seeking, middle-income, price-conscious buyers coming from the
+        non-metros, Snapdeal’s logistics networks powered by third party
+        logistics cover more than 96% of India’s pin codes enabling order
+        deliveries to more than 2500 towns and cities and expanding. Further,
+        Snapdeal's mission is to become India’s value lifestyle omni-channel
+        leader. We are excited about continuing to build a complete ecosystem
+        around value commerce, where we can serve Bharat consumers wherever they
+        are on their offline to online shopping journey. Snapdeal is part of the
+        AceVector Group and one of India’s best-known e-commerce companies with
+        an exclusive focus on the value segment.
+      </p>
+    </div>
+
+    <!-- <div class="container-tab">
+      <div class="left-content">
+        <div>
+          <p>Footwear</p>
+          <p class="sub-text">Casual Shoes</p>
+          <p class="sub-text">Sports Shoesr</p>
+          <p class="sub-text">Sneakers</p>
+          <p class="sub-text">Formal Shoes</p>
+          <p class="sub-text">Sleepers & Flip-Flops</p>
+        </div>
+        <div class="horizontal"></div>
+        
+        <div>
+          <p>BAGS & LUGGAGE</p>
+          <p class="sub-text">Backpacks</p>
+          <p class="sub-text">Laptop Bags</p>
+          <p class="sub-text">Hiking Bags</p>
+          <p class="sub-text">Luggage & Suitcases</p>
+          <p class="sub-text">Travel Accessories</p>
+          <p class="sub-text">Office Bags</p>
+        </div>
+      </div>
+      <div class="vertical"></div>
+      <div class="middle-content">
+        <div>
+          <p>CLOTHING</p>
+          <p class="sub-text"> T-Shirts & Polos</p>
+          <p class="sub-text">Shirts</p>
+          <p class="sub-text">Jeans</p>
+          <p class="sub-text">Trousers & Chinos</p>
+          <p class="sub-text">Innerwear & Sleepwear</p>
+        </div>
+        <div class="horizontal"></div>
+        <div>
+          <p>WINTER WEAR</p>
+          <p class="sub-text">Jackets</p>
+          <p class="sub-text"> Sweatshirts</p>
+          <p class="sub-text">Sweaters</p>
+          <p class="sub-text">Thermals</p>
+        </div>
+        <div class="horizontal"></div>
+        <div>
+          <p>SPORTSWEAR</p>
+          <p class="sub-text">T-Shirts & Polos</p>
+          <p class="sub-text">Trackpants & Tracksuits</p>
+        </div>
+        <div class="horizontal"></div>
+        <div>
+          <p>MEN'S GROOMING</p>
+          <p class="sub-text">Shaving Creams & Gels</p>
+        </div>
+      </div>
+      <div class="vertical"></div>
+      <div class="right-content">
+        <div>
+          <p>EYEWEAR</p>
+          <p class="sub-text">Sunglasses</p>
+        </div>
+        <div class="horizontal"></div>
+        <div>
+          <p>WATCHES</p>
+        </div>
+        <div class="horizontal"></div>
+        <div>
+          <p>JEWELLERY & CUFFLINKS</p>
+        </div>
+        <div class="horizontal"></div>
+        <div>
+          <p>ACCESSORIES</p>
+          <p class="sub-text">Wallets</p>
+          <p class="sub-text">Belts</p>
+          <p class="sub-text">Hats & Caps</p>
+          <p class="sub-text">Gift Sets</p>
+          <p class="sub-text">Neckties & Cravats</p>
+          <p class="sub-text">Card Holders</p>
+          <p class="sub-text">Keychains</p>
+          <p class="sub-text">Suspenders</p>
+        </div>
+        <div class="horizontal"></div>
+        <div>
+          <p class="sub-text">FRAGRANCES</p>
+          <p class="sub-text">Perfumes</p>
+          <p class="sub-text">Deodorants</p>
+          <p class="sub-text">Attars (Non-Alcoholic)</p>
+        </div>
+      </div>
+    </div> -->
 
     <script src="./script/index.js"></script>
   </body>

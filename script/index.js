@@ -28,14 +28,58 @@ window.addEventListener("load", () => {
     }
 
     //console.log(slider[currentIndex].innerText);
-   
+
     current = slider[currentIndex];
     current.classList.remove("active");
-   
+
     img.setAttribute("src", carousolImages[currentIndex]);
     const next = current.nextElementSibling || contentTab.firstElementChild;
     next.classList.add("active");
     currentIndex++;
-
   }, 3000);
 });
+
+window.onscroll = function () {
+  myFunction();
+};
+
+var navbar = document.querySelector(".navbar");
+var sticky = navbar.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky");
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+
+const block = document.querySelector(".display-block");
+const liTab = document.querySelector(".li-tab");
+
+liTab.addEventListener("mouseover", () => {
+  console.log("over");
+  block.style.display = "block";
+});
+block.addEventListener("mouseover", () => {
+  console.log("block out");
+  block.style.display = "block";
+});
+block.addEventListener("mouseout", () => {
+  console.log("block out");
+  block.style.display = "none";
+});
+
+let allUserData = JSON.parse(localStorage.getItem("users")) || [];
+
+let flag = JSON.parse(localStorage.getItem("userstatus")) || [];
+
+console.log(flag[0].status);
+if (flag[0].status) {
+  const h3 = document.getElementById("check");
+  allUserData.forEach((obj) => {
+    if (obj.email === flag[0].email) {
+      h3.innerText = `${obj.fname}${obj.lname}`;
+    }
+  });
+}

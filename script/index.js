@@ -73,8 +73,8 @@ block.addEventListener("mouseout", () => {
 let allUserData = JSON.parse(localStorage.getItem("users")) || [];
 
 let flag = JSON.parse(localStorage.getItem("userstatus")) || [];
-
-console.log(flag[0].status);
+if (allUserData.length && flag.length ) {
+  console.log(flag[0].status);
 if (flag[0].status) {
   const h3 = document.getElementById("check");
   allUserData.forEach((obj) => {
@@ -83,3 +83,21 @@ if (flag[0].status) {
     }
   });
 }
+}
+
+const searchBtn = document.getElementById('search');
+const searchText = document.getElementById('search-text');
+let searchData = JSON.parse(localStorage.getItem('search-data')) || []
+
+searchBtn.addEventListener('click', () => {
+  const text = searchText.value;
+  const obj = {
+    searchValue : text
+  }
+  searchData = [];
+  searchData.push(obj);
+  localStorage.setItem('search-data', JSON.stringify(searchData));
+  window.location.href =
+  "file:///C:/Users/asadayyubi/Desktop/debonair-surprise-3863/search.html";
+})
+

@@ -14,6 +14,9 @@ const cartData = JSON.parse(localStorage.getItem("buy")) || [];
 window.addEventListener("load", () => {
   fetchData(url);
   verifyUser();
+  setTimeout(() => {
+    searchType()
+  },1000)
 });
 function verifyUser() {
   if (allUserData.length && flag.length) {
@@ -98,6 +101,11 @@ searchBtn.addEventListener("click", () => {
   ) {
     displayProduct(allProductData);
   } else {
+        searchType();
+  }
+});
+
+function searchType() {
     searchData[0].searchValue = searchInp.value;
     localStorage.setItem("search-data", JSON.stringify(searchData));
     let filteredData = allProductData.filter((obj) => {
@@ -110,8 +118,7 @@ searchBtn.addEventListener("click", () => {
       }
     });
     displayProduct(filteredData);
-  }
-});
+}
 
 sortInp.addEventListener("change", () => {
   if (sortInp.value === "") {

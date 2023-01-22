@@ -4,6 +4,12 @@ let flag = JSON.parse(localStorage.getItem("userstatus")) || [];
 console.log(cartProducts);
 let total = document.querySelector(".sub-total");
 let total1 = document.querySelector(".sub-total1");
+const flagUser = {
+  status: true,
+  email: userInp.value,
+};
+flag.push(flagUser);
+localStorage.setItem("userstatus", JSON.stringify(flag));
 
 let Container = document.querySelector(".cart-div");
 window.addEventListener("load", () => {
@@ -139,10 +145,11 @@ modal1.style.backgroundColor = "white";
 const checkoutOrder = document.querySelector(".checkout > button");
 
 checkoutOrder.addEventListener("click", () => {
-  toggleModal();
-  const gif = document.querySelector(".gif");
+  if (flag[0].status) {
+    toggleModal();
+    const gif = document.querySelector(".gif");
 
-  const html = `<div style="width:100%;height:130px; margin-left:120px"><iframe src="https://giphy.com/embed/Is6hiXAQkDod3NXs72" width="100px" height="100px"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><div style="text-align: center;">
+    const html = `<div style="width:100%;height:130px; margin-left:120px"><iframe src="https://giphy.com/embed/Is6hiXAQkDod3NXs72" width="100px" height="100px"  frameBorder="0" class="giphy-embed" allowFullScreen></iframe></div><div style="text-align: center;">
     <h1 style='color:#228B22'>Order Confirmed</h1>
     <h2 style='color:#333'>Thank You</h2>
     <h4 style='color:#333'>for choosing our service!</h4>
@@ -150,20 +157,16 @@ checkoutOrder.addEventListener("click", () => {
     <h4 style='color:#333'>to serve you.</h4>
   </div>`;
 
-  gif.insertAdjacentHTML("afterend", html);
-  //   cartProducts = [];
-  //   localStorage.setItem("buy", JSON.stringify(cartProducts));
-  // const cont = document.querySelector('.container');
-  // if (cartProducts.length === 0) {
-  //     cont.innerHTML = '';
-  //     const html = 'Please add products to cart'
-  //     cont.insertAdjacentHTML("afterend",html);
-  // }
-  // localStorage.clear();
-  localStorage.removeItem("buy");
-  setTimeout(() => {
-    location.reload();
-  }, 3000);
+    gif.insertAdjacentHTML("afterend", html);
+
+    localStorage.removeItem("buy");
+    setTimeout(() => {
+      location.reload();
+    }, 3000);
+  } else {
+    alert("Please Signin First");
+    window.location.href = "signin.html";
+  }
 });
 
 window.onscroll = function () {

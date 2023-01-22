@@ -6,6 +6,12 @@ const userData = JSON.parse(localStorage.getItem("users"));
 console.log("connected");
 let flag = JSON.parse(localStorage.getItem("userstatus")) || [];
 let track = true;
+const flagUser = {
+  status: true,
+  email: userInp.value,
+};
+flag.push(flagUser);
+localStorage.setItem("userstatus", JSON.stringify(flag));
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -18,8 +24,7 @@ form.addEventListener("submit", (e) => {
       flag = [];
       flag.push(flagUser);
       localStorage.setItem("userstatus", JSON.stringify(flag));
-      window.location.href =
-        "file:///C:/Users/asadayyubi/Desktop/debonair-surprise-3863/index.html";
+      window.location.href = "index.html";
       track = false;
     }
   });
@@ -42,8 +47,7 @@ form.addEventListener("submit", (e) => {
     const btn = document.createElement("button");
     btn.innerText = "SignUp";
     btn.addEventListener("click", () => {
-      window.location.href =
-        "file:///C:/Users/asadayyubi/Desktop/debonair-surprise-3863/signup.html";
+      window.location.href = "signup.html";
     });
     btn.classList.add("btn");
     div.append(btn);

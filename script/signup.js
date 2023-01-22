@@ -16,6 +16,5 @@ form.addEventListener("submit", (e) => {
   };
   allUserData.push(formData);
   localStorage.setItem("users", JSON.stringify(allUserData));
-  window.location.href =
-    "file:///C:/Users/asadayyubi/Desktop/debonair-surprise-3863/signin.html";
+  window.location.href = "signin.html";
 });

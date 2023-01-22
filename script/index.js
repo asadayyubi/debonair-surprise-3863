@@ -100,5 +100,5 @@ searchBtn.addEventListener("click", () => {
   searchData.push(obj);
   localStorage.setItem("search-data", JSON.stringify(searchData));
   window.location.href =
-    "file:///C:/Users/asadayyubi/Desktop/debonair-surprise-3863/search.html";
+    "search.html";
 });

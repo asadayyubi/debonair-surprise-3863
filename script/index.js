@@ -1,5 +1,8 @@
 console.log("connnected");
+const searchBtn = document.getElementById("search");
 const carousol = document.querySelector(".carousol");
+const searchText = document.getElementById("search-text");
+let searchData = JSON.parse(localStorage.getItem("search-data")) || [];
 console.log(carousol);
 const content = document.querySelector(".content0");
 const slideContainer = document.querySelector(".slide-container");
@@ -73,31 +76,29 @@ block.addEventListener("mouseout", () => {
 let allUserData = JSON.parse(localStorage.getItem("users")) || [];
 
 let flag = JSON.parse(localStorage.getItem("userstatus")) || [];
-if (allUserData.length && flag.length ) {
+if (allUserData.length && flag.length) {
   console.log(flag[0].status);
-if (flag[0].status) {
-  const h3 = document.getElementById("check");
-  allUserData.forEach((obj) => {
-    if (obj.email === flag[0].email) {
-      h3.innerText = `${obj.fname}${obj.lname}`;
-    }
-  });
-}
+  if (flag[0].status) {
+    const h3 = document.getElementById("check");
+    allUserData.forEach((obj) => {
+      if (obj.email === flag[0].email) {
+        h3.innerText = `${obj.fname}${obj.lname}`;
+      }
+    });
+  }
 }
 
-const searchBtn = document.getElementById('search');
-const searchText = document.getElementById('search-text');
-let searchData = JSON.parse(localStorage.getItem('search-data')) || []
 
-searchBtn.addEventListener('click', () => {
+
+
+searchBtn.addEventListener("click", () => {
   const text = searchText.value;
   const obj = {
-    searchValue : text
-  }
+    searchValue: text,
+  };
   searchData = [];
   searchData.push(obj);
-  localStorage.setItem('search-data', JSON.stringify(searchData));
+  localStorage.setItem("search-data", JSON.stringify(searchData));
   window.location.href =
-  "file:///C:/Users/asadayyubi/Desktop/debonair-surprise-3863/search.html";
-})
-
+    "file:///C:/Users/asadayyubi/Desktop/debonair-surprise-3863/search.html";
+});

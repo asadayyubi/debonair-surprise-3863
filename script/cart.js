@@ -6,7 +6,7 @@ let total = document.querySelector(".sub-total");
 let total1 = document.querySelector(".sub-total1");
 const flagUser = {
   status: true,
-  email: userInp.value,
+  email: "",
 };
 flag.push(flagUser);
 localStorage.setItem("userstatus", JSON.stringify(flag));

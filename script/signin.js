@@ -2,14 +2,15 @@ const form = document.querySelector("form");
 const userInp = document.getElementById("user");
 const userPass = document.getElementById("password");
 const container = document.querySelector(".container");
-const userData = JSON.parse(localStorage.getItem("users"));
+const userData = JSON.parse(localStorage.getItem("users"))|| [];
 console.log("connected");
 let flag = JSON.parse(localStorage.getItem("userstatus")) || [];
 let track = true;
 const flagUser = {
-  status: true,
+  status: false,
   email: userInp.value,
 };
+flag=[];
 flag.push(flagUser);
 localStorage.setItem("userstatus", JSON.stringify(flag));
 
